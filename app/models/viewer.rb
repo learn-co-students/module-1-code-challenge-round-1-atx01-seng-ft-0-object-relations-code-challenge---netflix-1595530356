@@ -12,4 +12,14 @@ class Viewer
     @@all
   end
   
+  def reviews
+    Review.all.select do |review|
+      review.viewer == self
+    end
+  end
+
+  def reviewed_movie?(movie)
+    binding.pry
+  end
+ 
 end
